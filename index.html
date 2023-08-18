@@ -15,9 +15,7 @@
     <header></header>
     <main>
       <!-- Main Container -->
-      <div
-        class="flex flex-col lg:flex-row justify-center mt-6 mx-auto flex justify-evenly"
-      >
+      <div class="flex flex-col lg:flex-row mt-9 mb-9 mx-auto justify-evenly">
         <!-- Shape Container -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Triangle card -->
@@ -186,29 +184,82 @@
             </div>
           </div>
 
-          <!-- card-2 -->
-          <div class="card w-72 bg-base-100 shadow-xl">
+          <!-- Rhombus card -->
+          <div class="card w-72 bg-base-100 shadow-xl pt-7">
             <figure>
-              <img class="w-60" src="./images/rectangle.png" alt="Shoes" />
+              <img class="w-60 h-48" src="./images/rhombus.png" alt="Shoes" />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div class="card-body text-center">
+              <h2 class="card-title mx-auto font-bold">Ellipse</h2>
+              <p>Area (A) = πab</p>
+              <p>
+                <!-- ellipse length -->
+                <input
+                  class="border w-16 bg-slate-200 px-2"
+                  type="text"
+                  name=""
+                  id="ellipseInputNo1"
+                  placeholder="a"
+                /><span class="ml-2 mr-4">cm</span>
+                <!--  ellipse height -->
+                <input
+                  class="border w-16 bg-slate-200 px-2"
+                  type="text"
+                  name=""
+                  id="ellipseInputNo2"
+                  placeholder="b"
+                /><span class="ml-2">cm</span>
+              </p>
+              <p class="text-start px-2">
+                Area: <span id="ellipseAreaValue">0 </span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="ellipseButtonOnClicked()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
-          <!-- card-3 -->
-          <div class="card w-72 bg-base-100 shadow-xl">
+
+          <!-- Pentagon card -->
+          <div class="card w-72 bg-base-100 shadow-xl pt-7">
             <figure>
-              <img class="w-60" src="./images/rectangle.png" alt="Shoes" />
+              <img class="w-60 h-48" src="./images/pentagon.png" alt="Shoes" />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div class="card-body text-center">
+              <h2 class="card-title mx-auto font-bold">Ellipse</h2>
+              <p>Area (A) = πab</p>
+              <p>
+                <!-- ellipse length -->
+                <input
+                  class="border w-16 bg-slate-200 px-2"
+                  type="text"
+                  name=""
+                  id="ellipseInputNo1"
+                  placeholder="a"
+                /><span class="ml-2 mr-4">cm</span>
+                <!--  ellipse height -->
+                <input
+                  class="border w-16 bg-slate-200 px-2"
+                  type="text"
+                  name=""
+                  id="ellipseInputNo2"
+                  placeholder="b"
+                /><span class="ml-2">cm</span>
+              </p>
+              <p class="text-start px-2">
+                Area: <span id="ellipseAreaValue">0 </span> cm<sup>2</sup>
+              </p>
+              <div class="card-actions">
+                <button
+                  onclick="ellipseButtonOnClicked()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
               </div>
             </div>
           </div>
