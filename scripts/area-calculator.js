@@ -1,4 +1,4 @@
-// Triangle
+// Triangle ---------------------------------------
 function buttonOnClicked() {
   //   Get triangle base value
   const baseValue = document.getElementById("inputNo1");
@@ -11,6 +11,12 @@ function buttonOnClicked() {
   const heightValueFloat = parseFloat(heightValueString);
   console.log(heightValueFloat);
 
+  // validation check for input width and height for rectangle:
+  if (isNaN(baseValueFloat) || isNaN(heightValueFloat)) {
+    alert("Please insert a number");
+    return;
+  }
+
   // use the value in triangle formulla and apply it to Area Field:
   const area = 0.5 * baseValueFloat * heightValueFloat;
   const areaOutput = document.getElementById("areaValue");
@@ -19,7 +25,7 @@ function buttonOnClicked() {
   addToCalculationEntry("Triangle", area);
 }
 
-// For rectangle
+// For rectangle ------------------------------------------------
 function rectangleButtonOnClicked() {
   // Get the width value
   const widthValue = document.getElementById("rectangleInputNo1");
@@ -45,13 +51,14 @@ function rectangleButtonOnClicked() {
 }
 
 // From here,we use Reusable function --> reduce duplicate code
-//Parallelogram
+//Parallelogram --------------------------------------------------------
 function parallelogramButtonOnClicked() {
   const base = getInputValue("prarllelogramInputNo1");
   const height = getInputValue("prarllelogramInputNo2");
   // Validation check
   if (isNaN(base) || isNaN(height)) {
     alert("Please insert a number");
+    return;
   }
   const area = base * height;
   // calling the area function
@@ -61,10 +68,17 @@ function parallelogramButtonOnClicked() {
   addToCalculationEntry("Parallelogram", area);
 }
 
-// Ellipse
+// Ellipse ------------------------------------------------------------
 function ellipseButtonOnClicked() {
   const ellipseFirstRadius = getInputValue("ellipseInputNo1");
   const ellipseSecondRadius = getInputValue("ellipseInputNo2");
+
+  // validation check for input width and height for rectangle:
+  if (isNaN(ellipseFirstRadius) || isNaN(ellipseSecondRadius)) {
+    alert("Please insert a number");
+    return;
+  }
+
   const ellipseArea = 3.14 * ellipseFirstRadius * ellipseSecondRadius;
   const ellipseAreaToFixed = ellipseArea.toFixed(2);
   // set the area value by using function
@@ -75,7 +89,6 @@ function ellipseButtonOnClicked() {
 }
 
 // Resuable get input value function
-
 function getInputValue(elementId) {
   const inputField = document.getElementById(elementId);
   const inputFieldString = inputField.value;
@@ -93,8 +106,8 @@ function getArea(areaId, value) {
 // 2. check type using typeOf.
 // 3. NaN means not a number, isNaN(99) is NaN is checking whether an input is not a number.
 // -----------------------------------------
-// Add the calculation entry:
 
+// Add the calculation entry:
 // Step1: get the element where you want to add the dynamic HTML
 // Step2: create an element you want to add and put the tag name of your create element
 // Step3: If needed add some class
